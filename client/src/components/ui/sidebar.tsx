@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Settings, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import logoImage from "../../assets/logo.png";
 
 interface NavigationItem {
   id: string;
@@ -28,7 +29,9 @@ const Sidebar = ({ navigationItems, currentPath, isOpen, onClose }: SidebarProps
           className="flex flex-col w-64 bg-primary text-white transition-all duration-300 ease-in-out fixed inset-y-0 left-0 z-30"
         >
           <div className="flex items-center justify-between p-4 border-b border-primary-hover">
-            <h1 className="text-xl font-bold">Logistica Pro</h1>
+            <div className="h-10 flex items-center">
+              <img src={logoImage} alt="Ninja Engineering" className="h-full" />
+            </div>
             <button
               onClick={onClose}
               className="lg:hidden text-white focus:outline-none"
