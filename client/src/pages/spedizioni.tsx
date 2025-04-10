@@ -84,12 +84,60 @@ const Spedizioni = () => {
                   </Button>
                 </TableCell>
               </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">S-7842</TableCell>
+                <TableCell>Roma → Bari</TableCell>
+                <TableCell>SupermarketItalia</TableCell>
+                <TableCell>12/10/2023</TableCell>
+                <TableCell>
+                  <Badge variant="outline" className="bg-green-100 text-green-800">
+                    Consegnato
+                  </Badge>
+                </TableCell>
+                <TableCell>
+                  <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-800">
+                    <Eye className="h-4 w-4" />
+                  </Button>
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">S-7841</TableCell>
+                <TableCell>Milano → Bologna</TableCell>
+                <TableCell>IndustriaTessile</TableCell>
+                <TableCell>11/10/2023</TableCell>
+                <TableCell>
+                  <Badge variant="outline" className="bg-green-100 text-green-800">
+                    Consegnato
+                  </Badge>
+                </TableCell>
+                <TableCell>
+                  <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-800">
+                    <Eye className="h-4 w-4" />
+                  </Button>
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">S-7840</TableCell>
+                <TableCell>Napoli → Palermo</TableCell>
+                <TableCell>OrotraGioielli</TableCell>
+                <TableCell>10/10/2023</TableCell>
+                <TableCell>
+                  <Badge variant="outline" className="bg-red-100 text-red-800">
+                    Ritardo
+                  </Badge>
+                </TableCell>
+                <TableCell>
+                  <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-800">
+                    <Eye className="h-4 w-4" />
+                  </Button>
+                </TableCell>
+              </TableRow>
             </TableBody>
           </Table>
         </div>
         <div className="px-6 py-4 flex items-center justify-between border-t border-gray-200">
           <div className="text-sm text-gray-500">
-            Mostrando 3 di 245 spedizioni
+            Mostrando 6 di 245 spedizioni
           </div>
           <div className="flex-1 flex justify-end">
             <nav className="inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">

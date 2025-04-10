@@ -148,6 +148,69 @@ const Flotte = () => {
                   </div>
                 </TableCell>
               </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">OP234QR</TableCell>
+                <TableCell>Renault Master</TableCell>
+                <TableCell>Furgone</TableCell>
+                <TableCell>32.458 km</TableCell>
+                <TableCell>
+                  <Badge variant="outline" className="bg-green-100 text-green-800">
+                    Disponibile
+                  </Badge>
+                </TableCell>
+                <TableCell>
+                  <div className="flex">
+                    <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-800 mr-2">
+                      <Edit className="h-4 w-4" />
+                    </Button>
+                    <Button variant="ghost" size="sm" className="text-gray-600 hover:text-gray-800">
+                      <MoreVertical className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">ST567UV</TableCell>
+                <TableCell>Iveco Stralis</TableCell>
+                <TableCell>Camion</TableCell>
+                <TableCell>112.987 km</TableCell>
+                <TableCell>
+                  <Badge variant="outline" className="bg-blue-100 text-blue-800">
+                    In transito
+                  </Badge>
+                </TableCell>
+                <TableCell>
+                  <div className="flex">
+                    <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-800 mr-2">
+                      <Edit className="h-4 w-4" />
+                    </Button>
+                    <Button variant="ghost" size="sm" className="text-gray-600 hover:text-gray-800">
+                      <MoreVertical className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">WX890YZ</TableCell>
+                <TableCell>Volvo FH</TableCell>
+                <TableCell>Camion</TableCell>
+                <TableCell>92.346 km</TableCell>
+                <TableCell>
+                  <Badge variant="outline" className="bg-red-100 text-red-800">
+                    Fuori servizio
+                  </Badge>
+                </TableCell>
+                <TableCell>
+                  <div className="flex">
+                    <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-800 mr-2">
+                      <Edit className="h-4 w-4" />
+                    </Button>
+                    <Button variant="ghost" size="sm" className="text-gray-600 hover:text-gray-800">
+                      <MoreVertical className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </TableCell>
+              </TableRow>
             </TableBody>
           </Table>
         </div>
