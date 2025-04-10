@@ -157,8 +157,8 @@ const Percorsi = () => {
             backgroundPosition: 'center',
           }}
         />
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between p-6">
-          <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 bg-white/80 rounded-full flex items-center justify-center mb-4 md:mb-0">
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between p-8 py-12">
+          <div className="flex-shrink-0 w-24 h-24 md:w-28 md:h-28 bg-white/80 rounded-full flex items-center justify-center mb-5 md:mb-0">
             <svg width="80%" height="80%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path 
                 d="M20,50 L40,20 L60,50 L40,80 Z" 
@@ -191,17 +191,17 @@ const Percorsi = () => {
               </path>
             </svg>
           </div>
-          <div className="flex-grow md:ml-8 text-center md:text-left">
-            <h3 className="text-lg font-medium">Prossima ottimizzazione automatica tra:</h3>
-            <p className="text-3xl font-bold my-2">10 min e 30 sec</p>
+          <div className="flex-grow md:ml-10 text-center md:text-left">
+            <h3 className="text-xl font-medium">Prossima ottimizzazione automatica tra:</h3>
+            <p className="text-4xl font-bold my-3">10 min e 30 sec</p>
           </div>
-          <div className="mt-6 md:mt-0 flex flex-col space-y-3">
-            <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full flex items-center">
-              <RefreshCw className="mr-2 h-4 w-4" />
+          <div className="mt-8 md:mt-0 flex flex-col space-y-4">
+            <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full flex items-center">
+              <RefreshCw className="mr-2 h-5 w-5" />
               Calcola percorsi ottimi
             </Button>
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 px-6 py-2 rounded-full flex items-center">
-              <Edit3 className="mr-2 h-4 w-4" />
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-full flex items-center">
+              <Edit3 className="mr-2 h-5 w-5" />
               Crea un percorso manuale
             </Button>
           </div>
