@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
 import wavePattern from "../assets/wave-pattern.png";
+import vectorLogo from "../assets/vector-logo.png";
 import { RefreshCw, Edit3 } from "lucide-react";
 
 const Percorsi = () => {
@@ -158,38 +159,8 @@ const Percorsi = () => {
           }}
         />
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between p-8 py-12">
-          <div className="flex-shrink-0 w-24 h-24 md:w-28 md:h-28 bg-white/80 rounded-full flex items-center justify-center mb-5 md:mb-0">
-            <svg width="80%" height="80%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path 
-                d="M20,50 L40,20 L60,50 L40,80 Z" 
-                fill="#ed991d" 
-                transform="rotate(0, 50, 50)"
-              >
-                <animateTransform 
-                  attributeName="transform" 
-                  type="rotate" 
-                  from="0 50 50" 
-                  to="360 50 50" 
-                  dur="20s" 
-                  repeatCount="indefinite" 
-                />
-              </path>
-              <path 
-                d="M30,50 L50,30 L70,50 L50,70 Z" 
-                fill="#ed991d" 
-                opacity="0.7"
-                transform="rotate(45, 50, 50)"
-              >
-                <animateTransform 
-                  attributeName="transform" 
-                  type="rotate" 
-                  from="45 50 50" 
-                  to="405 50 50" 
-                  dur="15s" 
-                  repeatCount="indefinite" 
-                />
-              </path>
-            </svg>
+          <div className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 bg-white/80 rounded-full flex items-center justify-center mb-5 md:mb-0 p-5">
+            <img src={vectorLogo} alt="Logo" className="w-full h-full object-contain" />
           </div>
           <div className="flex-grow md:ml-10 text-center md:text-left">
             <h3 className="text-xl font-medium">Prossima ottimizzazione automatica tra:</h3>
