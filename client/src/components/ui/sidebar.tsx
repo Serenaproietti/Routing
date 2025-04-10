@@ -25,7 +25,7 @@ const Sidebar = ({ navigationItems, currentPath, isOpen, onClose }: SidebarProps
           animate={{ x: 0 }}
           exit={{ x: -300 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="flex flex-col w-64 bg-primary text-white transition-all duration-300 ease-in-out fixed inset-y-0 left-0 z-30 lg:static lg:z-0"
+          className="flex flex-col w-64 bg-primary text-white transition-all duration-300 ease-in-out fixed inset-y-0 left-0 z-30"
         >
           <div className="flex items-center justify-between p-4 border-b border-primary-hover">
             <h1 className="text-xl font-bold">Logistica Pro</h1>
@@ -44,8 +44,8 @@ const Sidebar = ({ navigationItems, currentPath, isOpen, onClose }: SidebarProps
                     <div
                       className={`flex items-center px-4 py-3 text-white rounded-lg transition-colors cursor-pointer ${
                         currentPath === item.path
-                          ? "bg-[#DF5B00]"
-                          : "hover:bg-[#E05F00]"
+                          ? "bg-[#c97e17]"
+                          : "hover:bg-[#c97e17]"
                       }`}
                     >
                       {item.icon}
@@ -60,8 +60,8 @@ const Sidebar = ({ navigationItems, currentPath, isOpen, onClose }: SidebarProps
                 <div
                   className={`flex items-center px-4 py-3 text-white rounded-lg transition-colors cursor-pointer ${
                     currentPath === "/impostazioni"
-                      ? "bg-[#DF5B00]"
-                      : "hover:bg-[#E05F00]"
+                      ? "bg-[#c97e17]"
+                      : "hover:bg-[#c97e17]"
                   }`}
                 >
                   <Settings className="h-5 w-5" />
