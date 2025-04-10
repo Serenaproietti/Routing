@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
-import wavyPattern from "../assets/wavy-pattern.svg";
+import wavePattern from "../assets/wave-pattern.png";
 import { RefreshCw, Edit3 } from "lucide-react";
 
 const Percorsi = () => {
@@ -150,9 +150,9 @@ const Percorsi = () => {
       {/* Sezione Ottimizzazione Percorsi */}
       <div className="relative rounded-xl overflow-hidden bg-white p-0.5 mb-6">
         <div 
-          className="absolute inset-0 opacity-40 z-0" 
+          className="absolute inset-0 opacity-90 z-0" 
           style={{ 
-            backgroundImage: `url(${wavyPattern})`,
+            backgroundImage: `url(${wavePattern})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
