@@ -23,7 +23,7 @@ interface LayoutProps {
 }
 
 const navigationItems = [
-  { id: "dashboard", icon: <PanelsTopLeft className="h-5 w-5" />, label: "PanelsTopLeft", path: "/dashboard" },
+  { id: "dashboard", icon: <PanelsTopLeft className="h-5 w-5" />, label: "Dashboard", path: "/dashboard" },
   { id: "calendario", icon: <Calendar className="h-5 w-5" />, label: "Calendario", path: "/calendario" },
   { id: "percorsi", icon: <Truck className="h-5 w-5" />, label: "Percorsi", path: "/percorsi" },
   { id: "spedizioni", icon: <Package className="h-5 w-5" />, label: "Spedizioni", path: "/spedizioni" },
@@ -37,8 +37,8 @@ const Layout = ({ children }: LayoutProps) => {
   const [location] = useLocation();
   const isMobile = useMobile();
   const [sidebarOpen, setSidebarOpen] = useState(!isMobile);
-  const [pageTitle, setPageTitle] = useState("PanelsTopLeft");
-  const [breadcrumb, setBreadcrumb] = useState("PanelsTopLeft");
+  const [pageTitle, setPageTitle] = useState("Dashboard");
+  const [breadcrumb, setBreadcrumb] = useState("Dashboard");
 
   useEffect(() => {
     if (isMobile) {

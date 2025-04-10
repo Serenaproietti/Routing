@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Settings } from "lucide-react";
+import { Settings, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 interface NavigationItem {
@@ -33,7 +33,7 @@ const Sidebar = ({ navigationItems, currentPath, isOpen, onClose }: SidebarProps
               onClick={onClose}
               className="lg:hidden text-white focus:outline-none"
             >
-              <span className="material-icons">close</span>
+              <X className="h-5 w-5" />
             </button>
           </div>
           <nav className="flex-1 overflow-y-auto py-4">
@@ -41,8 +41,8 @@ const Sidebar = ({ navigationItems, currentPath, isOpen, onClose }: SidebarProps
               {navigationItems.map((item) => (
                 <li key={item.id}>
                   <Link href={item.path}>
-                    <a
-                      className={`flex items-center px-4 py-3 text-white rounded-lg transition-colors ${
+                    <div
+                      className={`flex items-center px-4 py-3 text-white rounded-lg transition-colors cursor-pointer ${
                         currentPath === item.path
                           ? "bg-[#DF5B00]"
                           : "hover:bg-[#E05F00]"
@@ -50,15 +50,15 @@ const Sidebar = ({ navigationItems, currentPath, isOpen, onClose }: SidebarProps
                     >
                       {item.icon}
                       <span className="ml-3">{item.label}</span>
-                    </a>
+                    </div>
                   </Link>
                 </li>
               ))}
             </ul>
             <div className="px-2 mt-8">
               <Link href="/impostazioni">
-                <a
-                  className={`flex items-center px-4 py-3 text-white rounded-lg transition-colors ${
+                <div
+                  className={`flex items-center px-4 py-3 text-white rounded-lg transition-colors cursor-pointer ${
                     currentPath === "/impostazioni"
                       ? "bg-[#DF5B00]"
                       : "hover:bg-[#E05F00]"
@@ -66,7 +66,7 @@ const Sidebar = ({ navigationItems, currentPath, isOpen, onClose }: SidebarProps
                 >
                   <Settings className="h-5 w-5" />
                   <span className="ml-3">Impostazioni</span>
-                </a>
+                </div>
               </Link>
             </div>
           </nav>
