@@ -2,6 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
+import wavyPattern from "../assets/wavy-pattern.svg";
+import { RefreshCw, Edit3 } from "lucide-react";
 
 const Percorsi = () => {
   return (
@@ -142,6 +144,67 @@ const Percorsi = () => {
               </div>
             </div>
           </Card>
+        </div>
+      </div>
+
+      {/* Sezione Ottimizzazione Percorsi */}
+      <div className="relative rounded-xl overflow-hidden bg-white p-0.5 mb-6">
+        <div 
+          className="absolute inset-0 opacity-40 z-0" 
+          style={{ 
+            backgroundImage: `url(${wavyPattern})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between p-6">
+          <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 bg-white/80 rounded-full flex items-center justify-center mb-4 md:mb-0">
+            <svg width="80%" height="80%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path 
+                d="M20,50 L40,20 L60,50 L40,80 Z" 
+                fill="#ed991d" 
+                transform="rotate(0, 50, 50)"
+              >
+                <animateTransform 
+                  attributeName="transform" 
+                  type="rotate" 
+                  from="0 50 50" 
+                  to="360 50 50" 
+                  dur="20s" 
+                  repeatCount="indefinite" 
+                />
+              </path>
+              <path 
+                d="M30,50 L50,30 L70,50 L50,70 Z" 
+                fill="#ed991d" 
+                opacity="0.7"
+                transform="rotate(45, 50, 50)"
+              >
+                <animateTransform 
+                  attributeName="transform" 
+                  type="rotate" 
+                  from="45 50 50" 
+                  to="405 50 50" 
+                  dur="15s" 
+                  repeatCount="indefinite" 
+                />
+              </path>
+            </svg>
+          </div>
+          <div className="flex-grow md:ml-8 text-center md:text-left">
+            <h3 className="text-lg font-medium">Prossima ottimizzazione automatica tra:</h3>
+            <p className="text-3xl font-bold my-2">10 min e 30 sec</p>
+          </div>
+          <div className="mt-6 md:mt-0 flex flex-col space-y-3">
+            <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full flex items-center">
+              <RefreshCw className="mr-2 h-4 w-4" />
+              Calcola percorsi ottimi
+            </Button>
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 px-6 py-2 rounded-full flex items-center">
+              <Edit3 className="mr-2 h-4 w-4" />
+              Crea un percorso manuale
+            </Button>
+          </div>
         </div>
       </div>
 
