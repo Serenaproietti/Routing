@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { ChevronLeft, ChevronRight, Package } from "lucide-react";
+import { ChevronLeft, ChevronRight, Package, Truck } from "lucide-react";
 import { Clock } from "@/lib/icons";
 
 const Calendario = () => {
@@ -49,73 +49,133 @@ const Calendario = () => {
         </CardContent>
       </Card>
 
-      <Card>
-        <div className="px-6 py-4 border-b border-gray-200">
-          <h3 className="text-lg font-medium">Eventi Imminenti</h3>
-        </div>
-        <div className="divide-y divide-gray-200">
-          <div className="px-6 py-4 flex items-center">
-            <div className="flex-shrink-0 h-12 w-12 bg-orange-100 text-primary rounded-lg flex items-center justify-center">
-              <Package className="h-6 w-6" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium">Spedizione #IT58745</p>
-              <p className="text-xs text-gray-500">Milano → Roma</p>
-              <p className="text-xs text-gray-400">Domani, 09:00</p>
-            </div>
-            <div className="ml-auto">
-              <button className="p-2 text-gray-400 hover:text-gray-600">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-5 w-5"
-                >
-                  <circle cx="12" cy="12" r="1" />
-                  <circle cx="19" cy="12" r="1" />
-                  <circle cx="5" cy="12" r="1" />
-                </svg>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card>
+          <CardContent className="pt-6">
+            <div className="bg-orange-50 rounded-lg p-6">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center">
+                  <div className="bg-orange-100 text-primary rounded-lg p-2">
+                    <span className="text-2xl font-bold">P1</span>
+                  </div>
+                  <div className="ml-3">
+                    <h3 className="text-lg font-medium">Percorso #P0003</h3>
+                    <p className="text-sm text-gray-600">Mezzo: <span className="font-medium">FG001PH</span></p>
+                  </div>
+                </div>
+                <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
+                  Carico al 70%
+                </div>
+              </div>
+
+              <div className="space-y-3 mb-6">
+                <div>
+                  <p className="text-sm text-gray-600">Data:</p>
+                  <p className="font-medium">16/01/2025</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-600">Trasportatore:</p>
+                  <p className="font-medium">Emanuele Fiocco</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-600">Sede di partenza:</p>
+                  <p className="font-medium">Via dei Mirti, 35</p>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <div className="grid grid-cols-3 gap-4 py-2 border-b border-orange-200">
+                  <p className="text-xs text-gray-500">ID Spedizione</p>
+                  <p className="text-xs text-gray-500">Destinazione</p>
+                  <p className="text-xs text-gray-500">Status</p>
+                </div>
+                <div className="grid grid-cols-3 gap-4 py-2">
+                  <p className="font-medium">#S0001</p>
+                  <p className="text-gray-600">Via YYY</p>
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Consegnato</span>
+                </div>
+                <div className="grid grid-cols-3 gap-4 py-2 border-t border-orange-200">
+                  <p className="font-medium">#S0002</p>
+                  <p className="text-gray-600">Via ZZZ</p>
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Fallita</span>
+                </div>
+                <div className="grid grid-cols-3 gap-4 py-2 border-t border-orange-200">
+                  <p className="font-medium">#S0005</p>
+                  <p className="text-gray-600">Via ZZZ</p>
+                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs">In Consegna</span>
+                </div>
+              </div>
+
+              <button className="w-full mt-6 py-2 bg-orange-100 text-primary rounded-lg hover:bg-orange-200 transition-colors">
+                Vedi dettagli
               </button>
             </div>
-          </div>
-          <div className="px-6 py-4 flex items-center">
-            <div className="flex-shrink-0 h-12 w-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
-              <Clock className="h-6 w-6" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium">Turno Mattina - Team A</p>
-              <p className="text-xs text-gray-500">8 Autisti, 3 Magazzinieri</p>
-              <p className="text-xs text-gray-400">Domani, 06:00 - 14:00</p>
-            </div>
-            <div className="ml-auto">
-              <button className="p-2 text-gray-400 hover:text-gray-600">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-5 w-5"
-                >
-                  <circle cx="12" cy="12" r="1" />
-                  <circle cx="19" cy="12" r="1" />
-                  <circle cx="5" cy="12" r="1" />
-                </svg>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="pt-6">
+            <div className="bg-orange-50 rounded-lg p-6">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center">
+                  <div className="bg-orange-100 text-primary rounded-lg p-2">
+                    <span className="text-2xl font-bold">P2</span>
+                  </div>
+                  <div className="ml-3">
+                    <h3 className="text-lg font-medium">Percorso #P0004</h3>
+                    <p className="text-sm text-gray-600">Mezzo: <span className="font-medium">FG002PH</span></p>
+                  </div>
+                </div>
+                <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
+                  Carico al 85%
+                </div>
+              </div>
+
+              <div className="space-y-3 mb-6">
+                <div>
+                  <p className="text-sm text-gray-600">Data:</p>
+                  <p className="font-medium">16/01/2025</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-600">Trasportatore:</p>
+                  <p className="font-medium">Marco Rossi</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-600">Sede di partenza:</p>
+                  <p className="font-medium">Via Roma, 42</p>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <div className="grid grid-cols-3 gap-4 py-2 border-b border-orange-200">
+                  <p className="text-xs text-gray-500">ID Spedizione</p>
+                  <p className="text-xs text-gray-500">Destinazione</p>
+                  <p className="text-xs text-gray-500">Status</p>
+                </div>
+                <div className="grid grid-cols-3 gap-4 py-2">
+                  <p className="font-medium">#S0010</p>
+                  <p className="text-gray-600">Via XXX</p>
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Consegnato</span>
+                </div>
+                <div className="grid grid-cols-3 gap-4 py-2 border-t border-orange-200">
+                  <p className="font-medium">#S0011</p>
+                  <p className="text-gray-600">Via YYY</p>
+                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs">In Consegna</span>
+                </div>
+                <div className="grid grid-cols-3 gap-4 py-2 border-t border-orange-200">
+                  <p className="font-medium">#S0012</p>
+                  <p className="text-gray-600">Via ZZZ</p>
+                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs">In Consegna</span>
+                </div>
+              </div>
+
+              <button className="w-full mt-6 py-2 bg-orange-100 text-primary rounded-lg hover:bg-orange-200 transition-colors">
+                Vedi dettagli
               </button>
             </div>
-          </div>
-        </div>
-      </Card>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 };

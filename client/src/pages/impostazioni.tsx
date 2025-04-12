@@ -1,112 +1,145 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { HelpCircle, Trash2, Search } from "lucide-react";
 
 const Impostazioni = () => {
   return (
-    <div className="space-y-6 animate-in fade-in duration-300">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div className="md:col-span-1">
-          <Card>
-            <div className="p-6 border-b border-gray-200">
-              <h3 className="text-lg font-medium">Categorie</h3>
+    <div className="max-w-6xl mx-auto p-8">
+
+
+      <div className="space-y-12">
+        {/* Tempi e Disponibilità */}
+        <Card className="p-6">
+          <div className="space-y-6">
+            <div className="flex items-center gap-2 pb-4 border-b">
+              <h2 className="text-2xl font-bold">Tempi e Disponibilità</h2>
+              <HelpCircle className="h-5 w-5 text-gray-400" />
             </div>
-            <div className="divide-y divide-gray-200">
-              <button className="w-full text-left px-6 py-3 text-sm font-medium text-primary hover:bg-gray-50 focus:outline-none">
-                Profilo Utente
-              </button>
-              <button className="w-full text-left px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
-                Azienda
-              </button>
-              <button className="w-full text-left px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
-                Notifiche
-              </button>
-              <button className="w-full text-left px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
-                Integrazioni
-              </button>
-              <button className="w-full text-left px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
-                Sicurezza
-              </button>
-              <button className="w-full text-left px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
-                Preferenze
-              </button>
-            </div>
-          </Card>
-        </div>
-        <div className="md:col-span-3">
-          <Card>
-            <div className="p-6 border-b border-gray-200">
-              <h3 className="text-lg font-medium">Profilo Utente</h3>
-            </div>
-            <CardContent className="pt-6">
-              <div className="flex flex-col md:flex-row md:items-center mb-6">
-                <div className="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-medium text-2xl mb-4 md:mb-0">
-                  UP
-                </div>
-                <div className="md:ml-6">
-                  <h4 className="text-xl font-medium">Utente Pro</h4>
-                  <p className="text-sm text-gray-500">Amministratore</p>
-                  <Button variant="outline" className="mt-2">
-                    Cambia foto
-                  </Button>
-                </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+              <div className="space-y-2">
+                <Label>tempo massimo per consegna</Label>
+                <Input defaultValue="3 giorni" className="max-w-[200px]" />
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <Label>% overtime massimo</Label>
+                <Input className="border-red-500 max-w-[200px]" />
+                <p className="text-sm text-red-500">Campo non valido. Verificare il corretto inserimento</p>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* Gestione Inattività */}
+        <Card className="p-6">
+          <div className="space-y-6">
+            <div className="flex items-center gap-2 pb-4 border-b">
+              <h2 className="text-2xl font-bold">Gestione Inattività</h2>
+              <HelpCircle className="h-5 w-5 text-gray-400" />
+            </div>
+            
+            <div className="space-y-6">
+              <div>
+                <Label className="text-lg">gestione festività e chiusura</Label>
+              </div>
+              
+              <div className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="nome">Nome</Label>
-                  <Input id="nome" defaultValue="Utente" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="cognome">Cognome</Label>
-                  <Input id="cognome" defaultValue="Pro" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" defaultValue="utente.pro@logisticapro.it" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="telefono">Telefono</Label>
-                  <Input id="telefono" type="tel" defaultValue="+39 123 456 7890" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="sede">Sede</Label>
-                  <Select defaultValue="milano">
-                    <SelectTrigger>
+                  <Label>sede di riferimento</Label>
+                  <Select>
+                    <SelectTrigger className="max-w-[300px]">
                       <SelectValue placeholder="Seleziona sede" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="milano">Milano</SelectItem>
                       <SelectItem value="roma">Roma</SelectItem>
-                      <SelectItem value="napoli">Napoli</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="lingua">Lingua</Label>
-                  <Select defaultValue="italiano">
-                    <SelectTrigger>
-                      <SelectValue placeholder="Seleziona lingua" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="italiano">Italiano</SelectItem>
-                      <SelectItem value="english">English</SelectItem>
-                    </SelectContent>
-                  </Select>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                  <div className="space-y-2">
+                    <Label>inizio periodo di inattività</Label>
+                    <div className="flex gap-3">
+                      <Input placeholder="gg/mm/aaaa" className="flex-1" />
+                      <Input placeholder="00:00" className="w-24" />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <Label>fine periodo di inattività</Label>
+                    <div className="flex gap-3">
+                      <Input placeholder="gg/mm/aaaa" className="flex-1" />
+                      <Input placeholder="00:00" className="w-24" />
+                    </div>
+                  </div>
+                </div>
+
+                <Button className="w-full bg-[#ED991D] hover:bg-[#D88B1A] text-white">
+                  Inserisci
+                </Button>
+
+                <div className="border rounded-lg overflow-hidden mt-6">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-gray-50">
+                        <th className="px-6 py-3 text-left text-sm font-medium text-gray-600">sede</th>
+                        <th className="px-6 py-3 text-left text-sm font-medium text-gray-600">inizio inattività</th>
+                        <th className="px-6 py-3 text-left text-sm font-medium text-gray-600">fine inattività</th>
+                        <th className="px-6 py-3"></th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      {[1, 2, 3].map((i) => (
+                        <tr key={i}>
+                          <td className="px-6 py-4">Via XXX</td>
+                          <td className="px-6 py-4">16/01/2025</td>
+                          <td className="px-6 py-4">18/01/2025</td>
+                          <td className="px-6 py-4">
+                            <div className="flex justify-end">
+                              {i === 3 ? (
+                                <Button variant="ghost" size="sm">
+                                  <Search className="h-4 w-4 text-gray-500" />
+                                </Button>
+                              ) : (
+                                <Button variant="ghost" size="sm">
+                                  <Trash2 className="h-4 w-4 text-red-500" />
+                                </Button>
+                              )}
+                            </div>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </div>
-              <div className="flex justify-end mt-6">
-                <Button variant="outline" className="mr-3">
-                  Annulla
-                </Button>
-                <Button>
-                  Salva Modifiche
-                </Button>
+            </div>
+          </div>
+        </Card>
+
+        {/* Prudenza alla guida */}
+        <Card className="p-6">
+          <div className="space-y-6">
+            <div className="flex items-center gap-2 pb-4 border-b">
+              <h2 className="text-2xl font-bold">Prudenza alla guida</h2>
+              <HelpCircle className="h-5 w-5 text-gray-400" />
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+              <div className="space-y-2">
+                <Label>velocità massima mezzi</Label>
+                <Input defaultValue="80 km/h" className="max-w-[200px]" />
               </div>
-            </CardContent>
-          </Card>
-        </div>
+              <div className="space-y-2">
+                <Label>frequenza pause</Label>
+                <Input defaultValue="15 min ogni 200km" className="max-w-[200px]" />
+              </div>
+            </div>
+          </div>
+        </Card>
       </div>
     </div>
   );
